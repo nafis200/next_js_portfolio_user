@@ -44,10 +44,10 @@ const Project = () => {
           Projects
         </h2>
       </Fade>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
         {project?.slice(0, 3).map((proj) => (
           <Zoom key={proj._id}>
-            <div className="skill-category bg-base-100 border-2 border-blue-400 hover:border-cyan-300 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-200 transition-shadow duration-300">
+            <div className="skill-category bg-base-100 border-2 border-blue-400 hover:border-cyan-300 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-200 transition-shadow duration-300 flex flex-col h-full">
               <div className="project-image mb-4">
                 <Image
                   src={proj.image}
@@ -65,7 +65,7 @@ const Project = () => {
                 <strong>Technology:</strong>
               </p>
               <p>{proj.technologies.join(", ")}</p>
-              <div className="text-center flex justify-center space-x-4 mt-4">
+              <div className="text-center flex justify-center space-x-4 mt-7">
                 <Link
                   href={proj.project_link}
                   className="text-blue-500 hover:text-blue-700"
